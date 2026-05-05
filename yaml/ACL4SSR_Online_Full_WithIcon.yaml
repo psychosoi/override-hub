@@ -199,6 +199,25 @@ proxy-groups:
       - 日本节点
       - 韩国节点
       - 手动切换
+  - name: Steam社区
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Steam.png
+    type: select
+    proxies:
+      - 节点选择
+      - 香港节点
+      - 台湾节点
+      - 日本节点
+      - 狮城节点
+      - 美国节点
+      - 韩国节点
+      - 手动切换
+      - DIRECT
+  - name: Steam下载
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Steam.png
+    type: select
+    proxies:
+      - DIRECT
+      - 节点选择
   - name: 游戏平台
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png
     type: select
@@ -323,6 +342,8 @@ proxy-groups:
       - 微软云盘
       - 微软服务
       - 苹果服务
+      - Steam社区
+      - Steam下载
       - 游戏平台
       - 网易音乐
       - 全球直连
@@ -557,6 +578,15 @@ rule-providers:
     type: http
 
 rules:
+  # --- Steam 下载直连优先级最高 (防代理劫持) ---
+  - "DOMAIN-SUFFIX,steamcontent.com,DIRECT"
+  - "DOMAIN-SUFFIX,steambroadcast.com,DIRECT"
+  - "DOMAIN-KEYWORD,steamcontent,DIRECT"
+  - "DOMAIN-KEYWORD,steamcdn,DIRECT"
+  - "PROCESS-NAME,Steam.exe,Steam下载"
+  - "PROCESS-NAME,steamwebhelper.exe,Steam社区"
+  # ----------------------------------------
+
   - "RULE-SET,LocalAreaNetwork,全球直连"
   - "RULE-SET,UnBan,全球直连"
   - "RULE-SET,BanAD,广告拦截"
@@ -575,7 +605,7 @@ rules:
   - "RULE-SET,Epic,游戏平台"
   - "RULE-SET,Origin,游戏平台"
   - "RULE-SET,Sony,游戏平台"
-  - "RULE-SET,Steam,游戏平台"
+  - "RULE-SET,Steam,Steam社区"
   - "RULE-SET,Nintendo,游戏平台"
   - "RULE-SET,YouTube,油管视频"
   - "RULE-SET,Netflix,奈飞视频"
