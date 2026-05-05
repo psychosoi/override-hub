@@ -13,7 +13,7 @@
 
 [ACL4SSR_Online_Full.yaml](https://raw.githubusercontent.com/mihomo-party-org/override-hub/main/yaml/ACL4SSR_Online_Full.yaml)
 
-[ACL4SSR_Online_Full_WithIcon.yaml更新steam规则添加spotify TikTok分流]([https://github.com/psychosoi/override-hub/blob/main/yaml/ACL4SSR_Online_Full_WithIcon.yaml](https://github.com/psychosoi/override-hub/blob/main/yaml/ACL4SSR_Online_Full_WithIcon.yaml))
+[ACL4SSR_Online_Full_WithIcon.yaml更新steam规则添加spotify TikTok分流](https://github.com/psychosoi/override-hub/blob/main/yaml/ACL4SSR_Online_Full_WithIcon.yaml)
 
 [添加直连规则.yaml](https://raw.githubusercontent.com/mihomo-party-org/override-hub/main/yaml/%E6%B7%BB%E5%8A%A0%E7%9B%B4%E8%BF%9E%E8%A7%84%E5%88%99.yaml)
 
